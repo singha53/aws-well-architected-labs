@@ -137,7 +137,7 @@ A CloudFormation template is a JSON or YAML formatted text file that describes y
    * Choose **Next**.
 1. On the **Options** page under **Tags**, define a **Key** of **Owner**, with **Value** set to the username you choose for your administrator. You may define additional keys as needed. The CloudFormation template creates all the example tags given in the discussion on tagging above.
 1. Leave all other sections unmodified. Scroll to the bottom of the page and choose **Next**.
-1. On the **Review** page, review your choices and then choose **Create**.
+1. On the **Review** page, review your choices and then choose **Create Stack**.
 1. On the CloudFormation console page
     1. **Check the box next to your Stack Name** to see its details.
     1. If your **Stack Name** is not displayed, click the **refresh** button (circular arrow) in the top right until it appears.
@@ -274,20 +274,19 @@ When you performed the **Setup Inventory** actions, you created an association i
 
 1. Under **Actions** in the navigation bar, select **State Manager**. At this point, the **Status** may show that the inventory activity has not yet completed.
    1. Choose the single Association id that is the result of your **Setup Inventory** action.
-   1. Examine each of the available tabs of data under the **Association ID** heading.
-   1. Choose **Edit**.
-   1. Enter a name under **Name - optional** to provide a more user friendly label to the association, such as `InventoryAllInstances` (white space is not permitted in an _Association Name_).
-
-_Inventory_ is accomplished through the following:
-   * The activities defined in the AWS-GatherSoftwareInventory command document.
-   * The parameters provided in the **Parameters** section are passed to the document at execution.
-   * The targets are defined in the **Targets** section.
-   >**Important**<br>In this example there is a single target, the wildcard. The wildcard matches _all_ instances making them _all_ targets.
-   * The schedule for this activity is defined under **Specify schedule** and **Specify with** to use a CRON/Rate expression on a 30 minute interval.
-   * There is the option to specify **Output options**.
-   >**Note**<br>If you change the command document, the **Parameters** section will change to be appropriate to the new command document.
-
-
+   2. Examine each of the available tabs of data under the **Association ID** heading.
+   3. Choose **Edit**.
+   4. Enter a name under **Name - optional** to provide a more user friendly label to the association, such as `InventoryAllInstances` (white space is not permitted in an _Association Name_).
+	
+	_Inventory_ is accomplished through the following:
+	* The activities defined in the AWS-GatherSoftwareInventory command document.
+   	* The parameters provided in the **Parameters** section are passed to the document at execution.
+   	* The targets are defined in the **Targets** section.
+   	>**Important**<br>In this example there is a single target, the wildcard. The wildcard matches _all_ instances making them _all_ 	targets.
+   	* The schedule for this activity is defined under **Specify schedule** and **Specify with** to use a CRON/Rate expression on a 30 	minute interval.
+   	* There is the option to specify **Output options**.
+   	>**Note**<br>If you change the command document, the **Parameters** section will change to be appropriate to the new command 		document.
+   5. Click **Save Changes**.
 
 2. Navigate to **Managed Instances** under **Instances and Nodes** in the navigation bar. An **Association Status** has been established for the inventoried instances under management.
 1. Choose one of the **Instance ID** links to go to the inventory of the instance. The Inventory tab is now populated and you can track associations and their last activity under the Associations tab.
