@@ -331,15 +331,15 @@ Patch Manager uses **patch baselines**, which include rules for auto-approving p
 1. Under **Instances and Nodes** in the **AWS Systems Manager** navigation bar, choose **Patch Manager**.
 1. Click the **View predefined patch baselines** link under the **Configure patching** button on the upper right.
 1. Choose **Create patch baseline**.
-1. On the **Create patch baseline** page in the **Provide patch baseline details** section:
+1. On the **Create patch baseline** page in the **Patch baseline details** section:
    1. Enter a **Name** for your custom patch baseline, such as `AmazonLinuxSecAndNonSecBaseline`.
    1. Optionally enter a description, such as `Amazon Linux patch baseline including security and non-security patches`.
    1. Select **Amazon Linux** from the list.
-1. In the **Approval rules** section:
+1. In the **Approval rules for operating systems** section:
    1. Examine the options in the lists and ensure that **Product**, **Classification**, and **Severity** have values of **All**.
    1. Leave the **Auto approval delay** at its default of **0 days**.
    1. Change the value of **Compliance reporting - optional** to **Critical**.
-   1. Choose **Add another rule**.
+   1. Choose **Add rule**.
    1. In the new rule, change the value of **Compliance reporting - optional** to **Medium**.
    1. Check the box under **Include non-security updates** to include all Amazon Linux updates when patching.
 
